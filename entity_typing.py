@@ -1,16 +1,5 @@
 '''
-Group5. Entity Typing
-
-* Dataset:
-1.	Onto Notes
- 1-1. OntoNotes text corpus
- 1-2. ??? @Gyanesh
-2.	Wiki-One
-3.	Biocreative V Chemical Disease Relation benchmark (CDR)
-
-* Evaluation Metrics:
-1.	F-1 score 
-2.	MRR 
+Group5. Entity Typing 
 '''
 
 import abc
