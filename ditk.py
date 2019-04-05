@@ -5,7 +5,7 @@ Group5. Entity Typing
 1.	Onto Notes
  1-1. OntoNotes text corpus
  1-2. ??? @Gyanesh
-2.	Wiki 
+2.	Wiki-One
 3.	Biocreative V Chemical Disease Relation benchmark (CDR)
 
 * Evaluation Metrics:
@@ -17,52 +17,37 @@ import abc
 
 class entity_typing(abc.ABC):
 
-	@classmethod
 	@abc.abstractmethod
-	def read_dataset(cls, dataset_name: string, options=None) -> np.array, np.array:
+	def read_dataset(self, file_names, options=None):
 		''' 
-		intput: (String) dataset_name OR dataset_path
-		output: 2 things; dataset for train_data/ test_data
+		input: List of Strings file_names OR file_paths to each file needed for the module
+		output: a tuple of lists containing the dataset for train_data(tasks) and test_data(tasks) each as lists and other data as needed per project
 
-			NOTE: we need optional for input ? If not, we can remove "*args, **kwargs"
-				  I specifically return np.array type for my train_data set. If others return different types of values then we can add more objects to return. then others can return just default value. 
 		'''
 		pass
 
-	@classmethod
 	@abc.abstractmethod
-	def train(cls, dataset_nam: string, options=None) -> String:
+	def train(self, train_data, options=None) :
 		''' 
-		intput: (String) dataset_name
-		output: nothing and then just save the model on the file OR (String) model_path
+		input: train_data a list of all the data returned from the read_dataset method required for the module
+		output: None or optionally model details if it's not returned then it will save the model into a file OR store within the system module
 		'''
 		pass
 
-	@classmethod
 	@abc.abstractmethod
-	def predict(cls, model_name: string, options=None) -> np.array:
+	def predict(self, test_data, optional model_details, options=None) :
 		''' 
-		intput: list of input data set [ train OR test input ]
-		output: predicted labels (for me, type of label is np.array)
+		input: list of input data set containing the test input
+		output: predicted labels 
 		'''
 		pass
 
 
-	@classmethod
 	@abc.abstractmethod
-	def evaluate(cls, label: np.array, options=None) -> tuple:
+	def evaluate(self, test_files, options=None) :
 		''' 
-		intput: (String) dataset_name
-		output: tuple with (f1 score, MRR); set default value if ur code is not applicable
+		input: list containing the data set containing the test input 
+		output: list contatining all output data including (f1 score, and MRR if present); set default value if the code is not applicable
 		'''
 
-
-
-
-
-
-
-
-
-
-
+		pass
