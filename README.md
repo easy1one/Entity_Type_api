@@ -4,7 +4,7 @@
 1.	Onto Notes <br>
 1-1. OntoNotes text corpus, provided pre-processed tokenized format by Shimaoka et al (it's also publicly available datasets.)<br>
 1-2. ???
-2.	Wiki <br>
+2.	Wiki-One <br>
 3.	Biocreative V Chemical Disease Relation benchmark (CDR)
 
 
