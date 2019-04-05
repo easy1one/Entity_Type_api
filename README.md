@@ -8,4 +8,4 @@
 
 ## Evaluation Metrics:
 1.	F-1 score
-2.	MRR
+2.	MRR (Mean Reciprocal Rank)
