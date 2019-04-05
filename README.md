@@ -1,4 +1,4 @@
-# Group5. Entity Types
+# CSCI 548 Group5. Entity Typing (ditk.entity_typing)
 
 ## * Dataset:
 1.	Onto Notes <br>
