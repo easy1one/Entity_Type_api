@@ -33,7 +33,7 @@ class entity_typing(abc.ABC):
 
 
 	@abc.abstractmethod
-	def evaluate(self, test_files, options=None) :
+	def evaluate(self, test_data, options=None) :
 		''' 
 		input: list containing the data set containing the test input 
 		output: list contatining all output data including (f1 score, and MRR if present); set default value if the code is not applicable
